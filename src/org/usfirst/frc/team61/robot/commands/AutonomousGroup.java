@@ -13,11 +13,10 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 public class AutonomousGroup extends CommandGroup {
     
     public AutonomousGroup() {        
-        // Drive forward for 10 inches
-        addSequential(new DriveForDistance(10, 0.2));
-        // Wait for 0.5 seconds
-        addSequential(new WaitForTime(0.5));
-        // Drive backward for 10 inches
-        addSequential(new ReverseDriveForDistance(10, 0.2));
+        //addSequential(new ReverseDriveForDistance(10, 0.2));
+    	addSequential(new ElevWithEncoder(.5,1.1));
+    	addSequential(new DriveForDistance(3,.5 ));
+    	addSequential(new ClawToggle());
+    	
     }
 }
