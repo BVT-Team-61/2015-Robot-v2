@@ -21,7 +21,7 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 
     public final String teamNo = "  61";
-    public final String versionNo = "2015-1-13.T";
+    public final String versionNo = "2015-1-20.2";
     
     Command autonomousCommand;
 
@@ -74,7 +74,7 @@ public class Robot extends IterativeRobot {
      * You can use it to reset subsystems before shutting down.
      */
     public void disabledInit(){
-
+    	System.out.println("Disabled");
     }
 
     /**

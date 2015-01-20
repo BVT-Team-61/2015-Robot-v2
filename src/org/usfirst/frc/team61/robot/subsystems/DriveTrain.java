@@ -56,16 +56,6 @@ public class DriveTrain extends Subsystem {
     }
     
     /**
-     * Reversed controls tankDrive.
-     * @param right Right motor value
-     * @param left Left motor value
-     */
-    public void reverseTankDrive(double right, double left) {
-        moveRightMotor(right);
-        moveLeftMotor(left);
-    }
-    
-    /**
      * 
      * @param speed 
      */

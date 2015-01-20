@@ -1,31 +1,25 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package org.usfirst.frc.team61.robot.commands;
 
 /**
  *
- * @author Team-61 
  */
-public class DriveWithJoysticks extends CommandBase {
-        
-    public DriveWithJoysticks() {
-        // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
-        requires(drivetrain);
+public class LiftWithSense extends CommandBase {
+
+    public LiftWithSense() {
+        requires(lift);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	System.out.println("Driving");
+		System.out.println("Lifting w/ Sense Started");
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        // Pass joystick values to drivetrain subsystem.
-    	drivetrain.tankDrive(oi.getLeftSpeed(),oi.getRightSpeed());
+		lift.moveElev(oi.getElevSpeed()*oi.getElevSense());
+		//System.out.println(oi.getElevSpeed()+" * "+oi.getElevSense());
     }
+
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
         return false;

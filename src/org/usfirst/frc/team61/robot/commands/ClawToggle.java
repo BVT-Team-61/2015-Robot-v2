@@ -1,34 +1,29 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package org.usfirst.frc.team61.robot.commands;
 
 /**
  *
- * @author Team-61 
  */
-public class DriveWithJoysticks extends CommandBase {
-        
-    public DriveWithJoysticks() {
+public class ClawToggle extends CommandBase {
+
+    public ClawToggle() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-        requires(drivetrain);
+    	requires(claw);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	System.out.println("Driving");
+    	claw.setState(!claw.getState()); // Set the claw to the opposite state
+    	System.out.println("Claw Toggled");
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        // Pass joystick values to drivetrain subsystem.
-    	drivetrain.tankDrive(oi.getLeftSpeed(),oi.getRightSpeed());
     }
+
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+        return true;
     }
 
     // Called once after isFinished returns true

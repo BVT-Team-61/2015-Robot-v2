@@ -3,43 +3,28 @@ package org.usfirst.frc.team61.robot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+
 import org.usfirst.frc.team61.robot.RobotMap;
+import org.usfirst.frc.team61.robot.commands.ClawToggle;
 
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
-public class OI {   
-
-   private static boolean reverseDriveMode=false ;
+public class OI {
    
    // Define Joystick Objects
    Joystick jLeft = new Joystick(RobotMap.leftStick);    
    Joystick jRight = new Joystick(RobotMap.rightStick); 
    Joystick jElev = new Joystick(RobotMap.elevStick);
+   Joystick jClaw = new Joystick(RobotMap.clawStick);
    
    // Define Joystick Buttons
-   Button forwardButton = new JoystickButton (jRight,2);
-   Button reverseButton = new JoystickButton (jRight,1);
+   Button clawButton = new JoystickButton (jLeft,1);
    
-    // Placeholder method. Does nothing yet.
-    public boolean weAreDriving() {
-        return true;
-    }
-    
-    // Determines if robot in reverse.
-    public boolean weAreReversing (){
-        // If the reverse button is hit, then we are reversing.
-        if (reverseButton.get()) {
-            reverseDriveMode = false;
-        }
-        // If the forward button is hit, then we are not reversing.
-        else if (forwardButton.get()) {
-            reverseDriveMode= true;
-        }
-        // Otherwise, just return whatever it was before
-        return reverseDriveMode ;
-    }
+   public OI() {
+	   clawButton.whenPressed(new ClawToggle());
+   }
     
     // Method to return the left joystick Y Axis.
     public double getLeftSpeed() {
@@ -54,6 +39,11 @@ public class OI {
     // Same thing but for the right joystick Y Axis.
     public double getElevSpeed() {
         return (jElev.getY());
+    }
+
+    // Same thing but for the right joystick Z Axis.
+    public double getElevSense() {
+        return ((jElev.getZ()+1)/2);
     }
 }
 

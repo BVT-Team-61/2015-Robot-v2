@@ -14,7 +14,6 @@ public class LiftWithJoysticks extends CommandBase {
 
 	protected void execute() {
 		lift.moveElev(oi.getElevSpeed());
-
 	}
 
 	protected void initialize() {

@@ -20,5 +20,27 @@ public class Claw extends Subsystem {
         //setDefaultCommand(new MySpecialCommand());
     	System.out.println("Claw Started");
     }
+    
+    public void openClaw() {
+    	close.set(false);
+    	open.set(true);
+    }
+    
+    public void closeClaw() {
+    	open.set(false);
+    	close.set(true);
+    }
+    
+    public void setState(boolean state) {
+    	if(state) {
+        	openClaw();
+    	} else {
+    		closeClaw();
+    	}
+    }
+    
+    public boolean getState() {
+    	return open.get();
+    }
 }
 

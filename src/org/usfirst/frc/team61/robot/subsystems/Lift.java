@@ -4,14 +4,14 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import org.usfirst.frc.team61.robot.RobotMap;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.Talon;
-import org.usfirst.frc.team61.robot.commands.LiftWithJoysticks;
+import org.usfirst.frc.team61.robot.commands.LiftWithSense;
 
 public class Lift extends Subsystem {
 	
 	SpeedController elevMotor = new Talon(RobotMap.elevMotor);
 
 	protected void initDefaultCommand() {
-		setDefaultCommand(new LiftWithJoysticks());
+		setDefaultCommand(new LiftWithSense());
 
 	}
 	public void moveElev(double vel){
