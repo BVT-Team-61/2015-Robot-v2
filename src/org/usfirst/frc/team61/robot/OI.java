@@ -21,6 +21,7 @@ public class OI {
    
    // Define Joystick Buttons
    Button clawButton = new JoystickButton (jLeft,1);
+   Button spinButton = new JoystickButton (jClaw,1);
    
    public OI() {
 	   clawButton.whenPressed(new ClawToggle());
@@ -30,7 +31,12 @@ public class OI {
     public double getLeftSpeed() {
         return (jLeft.getY()); 
     }
-    
+    public boolean getSpinButton(){
+    	return (spinButton.get());// gets the speed for the wheels on the side of the arms
+    }
+    public double getClawSpeed(){
+    	return (jClaw.getY());
+    }
     // Same thing but for the right joystick Y Axis.
     public double getRightSpeed() {
         return (jRight.getY());

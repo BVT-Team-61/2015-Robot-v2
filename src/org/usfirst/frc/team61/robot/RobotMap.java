@@ -16,7 +16,8 @@ public class RobotMap {
     public static final int leftMotor = 0; // Left motor in PWM port 0
     public static final int rightMotor = 1; // Right motor in PWM port 1
     public static final int elevMotor = 2;
-    public static final int clawMotor = 3;
+    public static final int leftClawMotor = 3;// the motor ports that the claw wheels are put into
+    public static final int rightClawMotor=4;
 
     //Digital IO (DIO)
     public static final int leftEncoderA = 0;
