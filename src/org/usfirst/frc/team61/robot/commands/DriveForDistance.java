@@ -11,7 +11,7 @@ package org.usfirst.frc.team61.robot.commands;
  */
 public class DriveForDistance extends CommandBase {
     
-    private static final double threshold = 2.0;
+    private static final double threshold = 0.5;
     private double speed = 0.1;
     private double traveled = 0;
     private double target = 0;

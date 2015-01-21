@@ -61,7 +61,6 @@ public class DriveTrain extends Subsystem {
      */
     private void moveLeftMotor(double speed)
     {
-        speed = speed*-1.0;
         leftMotor.set(speed);
     }
     
@@ -71,6 +70,7 @@ public class DriveTrain extends Subsystem {
      */
     private void moveRightMotor(double speed)
     {
+        speed = speed*-1.0;
         rightMotor.set(speed);
     }
     

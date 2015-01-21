@@ -10,7 +10,7 @@ public class RobotMap {
     public static final int leftStick = 0;
     public static final int rightStick = 1;
     public static final int elevStick = 2;
-	public static final int clawStick = 3;
+    public static final int clawStick = 3;
     
     //Motors (PWM)
     public static final int leftMotor = 0; // Left motor in PWM port 0
