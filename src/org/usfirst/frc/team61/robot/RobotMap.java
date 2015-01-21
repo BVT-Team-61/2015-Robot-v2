@@ -30,4 +30,7 @@ public class RobotMap {
     //Solenoid (PCM)
     public static final int openSolenoid = 0;
     public static final int closeSolenoid = 1;
+    
+    //Analog IO
+    public static final int mainGyro = 0;
 }

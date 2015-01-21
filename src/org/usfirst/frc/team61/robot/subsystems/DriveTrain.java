@@ -8,6 +8,7 @@ import org.usfirst.frc.team61.robot.RobotMap;
 import org.usfirst.frc.team61.robot.commands.DriveWithJoysticks;
 
 import edu.wpi.first.wpilibj.Encoder;
+import edu.wpi.first.wpilibj.Gyro;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.Talon;
 //import edu.wpi.first.wpilibj.Compressor;
@@ -27,7 +28,8 @@ public class DriveTrain extends Subsystem {
     //Define Encoders
     private Encoder leftEncoder = new Encoder(RobotMap.leftEncoderA, RobotMap.leftEncoderB);
     private Encoder rightEncoder = new Encoder(RobotMap.rightEncoderA, RobotMap.rightEncoderB);
-    
+
+    private Gyro mainGyro = new Gyro(RobotMap.mainGyro);
 
     private SpeedController leftMotor = new Talon(RobotMap.leftMotor);
     private SpeedController rightMotor = new Talon(RobotMap.rightMotor);
@@ -44,6 +46,8 @@ public class DriveTrain extends Subsystem {
         // Set the default command for a subsystem here.
         setDefaultCommand(new DriveWithJoysticks());
     }
+    
+    // -- Motors
     
     /**
      * Tank drive for main drivetrain.
@@ -73,6 +77,8 @@ public class DriveTrain extends Subsystem {
         speed = speed*-1.0;
         rightMotor.set(speed);
     }
+    
+    // -- Encoder
     
     /**
      * Reset Right Encoder
@@ -112,6 +118,28 @@ public class DriveTrain extends Subsystem {
     public double getLeftEncoder()
     {
         return leftEncoder.getDistance();
+    }
+    
+    // -- Gyroscope
+    
+    /**
+     * Resets Gyro to 0
+     */
+    public void resetGyro(){
+        mainGyro.reset();
+    }
+    
+    /**
+     * Get Gyro Angle
+     * Positive is clockwise
+     * @return scaled angle in degrees
+     */
+    public double getGyroAngle(){
+        return mainGyro.getAngle();
+    }
+    
+    public double getGyroRate(){
+        return mainGyro.getRate();
     }
 }
  
