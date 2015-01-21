@@ -5,7 +5,7 @@ public class ElevWithEncoder extends CommandBase {
 	private double vel =.5;
 	private double dist = 0;
 	private double traveled = 0;
-	private static final double threshold= 2.0;
+	private static final double threshold= 0.1;
 
 	public ElevWithEncoder(double dist, double vel){
 		requires(lift);
@@ -15,12 +15,15 @@ public class ElevWithEncoder extends CommandBase {
 		
 	}
 	protected void end() {
+		lift.moveElev(0.0);
 
 	}
 
 	protected void execute() {
 		lift.moveElev(vel);
-		traveled = lift.getLiftEncoder();
+		traveled = -1.0*(lift.getLiftEncoder());
+		 System.out.print(traveled+" units ");
+	     System.out.println((dist - traveled)+" units to go");
 
 	}
 

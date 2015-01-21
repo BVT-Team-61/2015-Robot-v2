@@ -11,7 +11,14 @@ public class Lift extends Subsystem {
 	
 	SpeedController elevMotor = new Talon(RobotMap.elevMotor);
 	Encoder liftEncoder = new Encoder(RobotMap.elevEncoderA, RobotMap.elevEncoderB);
+	
+	private static final double dp = 1;
 
+	public Lift(){
+		liftEncoder.setDistancePerPulse(dp);
+		//liftEncoder.setReverseDirection(true);
+	}
+	
 	protected void initDefaultCommand() {
 		setDefaultCommand(new LiftWithSense());
 
