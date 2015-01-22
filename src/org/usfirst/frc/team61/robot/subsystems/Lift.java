@@ -16,7 +16,7 @@ public class Lift extends Subsystem {
 	SpeedController elevMotor = new Talon(RobotMap.elevMotor);
 	Encoder liftEncoder = new Encoder(RobotMap.elevEncoderA, RobotMap.elevEncoderB);
 	
-	private static final double dp = 1;
+	private static final double dp = 0.02625; // 100 pulses = 2 5/8 (2.625) inches
 
 	public Lift(){
 		liftEncoder.setDistancePerPulse(dp);
@@ -41,7 +41,7 @@ public class Lift extends Subsystem {
 	 * @return number of pulses
 	 */
 	public double getLiftEncoder(){
-		return -liftEncoder.getDistance();
+		return liftEncoder.getDistance();
 	}
 	
 	/**

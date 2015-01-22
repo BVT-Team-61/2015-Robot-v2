@@ -5,11 +5,11 @@ package org.usfirst.frc.team61.robot.commands;
  * @author Team-61
  */
 public class ElevWithEncoder extends CommandBase {
-	private double speed = 0.9;
+	private double speed = 0.4;
 	private double target = 0;
 	private double position;
 	private double error;
-	private static final double threshold = 5;
+	private static final double threshold = 1.5;
 
 	public ElevWithEncoder(double target, double speed){
 		requires(lift);
@@ -25,10 +25,17 @@ public class ElevWithEncoder extends CommandBase {
 	protected void execute() {
 		position = lift.getLiftEncoder();
 		error = target - position;
-		double vel = (error > 0) ? speed : -speed;
+		double vel;
+		if (error >= 5) vel = -speed;
+		else if(error < 5 && error >= 2) vel = -speed/2;
+		else if(error < 2 && error >= 0) vel = -speed/4;
+		else if(error < 0 && error >= -2) vel = speed/4;
+		else if(error < -2 && error >= -5) vel = speed/2;
+		else if(error < -5) vel = speed;
+		else vel = 0;
 		lift.moveElev(vel);
 		 System.out.print(position+" units ");
-	     System.out.println(error+" units to go");
+	     System.out.println(error+" units to go @ "+vel);
 
 	}
 

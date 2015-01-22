@@ -6,6 +6,8 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 import org.usfirst.frc.team61.robot.RobotMap;
 import org.usfirst.frc.team61.robot.commands.ClawToggle;
+import org.usfirst.frc.team61.robot.commands.ElevWithEncoder;
+import org.usfirst.frc.team61.robot.commands.ElevEncoderReset;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -23,9 +25,28 @@ public class OI {
 	Button clawButton = new JoystickButton(jLeft,1);
 	Button spinButton = new JoystickButton(jClaw,1);
 	
+	Button elevPosAButton = new JoystickButton(jElev,6);
+	Button elevPosBButton = new JoystickButton(jElev,7);
+	
+	Button elevResetButton = new JoystickButton(jElev,8);
+	Button elevResetBButton = new JoystickButton(jElev,9);
+
+	Button elevPosDButton = new JoystickButton(jElev,10);
+	Button elevPosCButton = new JoystickButton(jElev,11);
+	
+	
+	
     public OI() {
     	// Triggers ClawToggle command when the jClaw trigger is pressed.
 		clawButton.whenPressed(new ClawToggle());
+		
+		// Elevator levels defined here. Uses base buttons.
+		elevPosAButton.whenPressed(new ElevWithEncoder(0,0.4));
+		elevPosBButton.whenPressed(new ElevWithEncoder(13,0.4));
+		elevPosCButton.whenPressed(new ElevWithEncoder(26,0.4));
+		elevPosDButton.whenPressed(new ElevWithEncoder(39,0.4));
+		elevResetButton.whenPressed(new ElevEncoderReset());
+		elevResetBButton.whenPressed(new ElevEncoderReset());
     }
     
     /**
