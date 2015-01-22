@@ -27,7 +27,7 @@ public class Lift extends Subsystem {
 		elevMotor.set(vel);
 	}
 	public double getLiftEncoder(){
-		return liftEncoder.getDistance();
+		return -liftEncoder.getDistance();
 	}
 	public void resetEncoder(){
 		liftEncoder.reset();
