@@ -1,7 +1,8 @@
 package org.usfirst.frc.team61.robot.commands;
 
 /**
- *
+ * Lift motor at a specific speed with sensitivity adjustment.
+ * @author Team-61
  */
 public class LiftWithSense extends CommandBase {
 

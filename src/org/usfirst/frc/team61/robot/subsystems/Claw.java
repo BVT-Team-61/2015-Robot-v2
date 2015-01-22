@@ -8,33 +8,44 @@ import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.Talon;
 
 /**
- *
+ * Subsystem that controls the claw solenoids (open/close)
+ * and controls SpeedControllers for suck motors.
+ * @author Team-61
  */
 public class Claw extends Subsystem {
     
-    // Put methods for controlling this subsystem
-    // here. Call these from Commands.
+    // Solenoid declarations.
 	private Solenoid open = new Solenoid(RobotMap.openSolenoid);
 	private Solenoid close = new Solenoid(RobotMap.closeSolenoid);
-	// declaring object For claw wheels
+	
+	// SpeedController declarations.
 	private SpeedController leftClawMotor = new Talon(RobotMap.leftClawMotor);
 	private SpeedController rightClawMotor = new Talon(RobotMap.rightClawMotor);
+	
     public void initDefaultCommand() {
-        // Set the default command for a subsystem here.
-        //setDefaultCommand(new MySpecialCommand());
     	System.out.println("Claw Started");
     }
     
+    /**
+     * Sets the claw state to open.
+     */
     public void openClaw() {
     	close.set(false);
     	open.set(true);
     }
     
+    /**
+     * Sets the claw state to closed.
+     */
     public void closeClaw() {
     	open.set(false);
     	close.set(true);
     }
     
+    /**
+     * Sets the claw state
+     * @param state - true (open) or false
+     */
     public void setState(boolean state) {
     	if(state) {
         	openClaw();
@@ -43,13 +54,20 @@ public class Claw extends Subsystem {
     	}
     }
     
+    /**
+     * returns the state of the claw pnuematics
+     * @return true (open) or false
+     */
     public boolean getState() {
     	return open.get();
     }
-    // put functions for the Claw wheels here
-    // when x button is pressed the wheels spin inward.
-    // when x button is pressed again the wheels spin outward.
-	public void clawDrive(double speed, boolean spin) {
+    
+	/**
+	 * Controls claw motors
+	 * @param speed - rate that the motors spin
+	 * @param spin - if true, right motor direction is reversed.
+	 */
+    public void clawDrive(double speed, boolean spin) {
 		moveLeftMotor(speed);
 		if (spin) {
 			moveRightMotor(-speed);

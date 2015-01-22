@@ -6,8 +6,9 @@
 package org.usfirst.frc.team61.robot.commands;
 
 /**
- *
- * @author William
+ * Waits for a specific amount of time.
+ * Will continue driving while it waits.
+ * @author Team-61
  */
 public class WaitForTime extends CommandBase {
     

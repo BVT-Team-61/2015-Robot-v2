@@ -16,7 +16,7 @@ import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
- *
+ * Subsystem that controls the Left and Right drive motors
  * @author Team-61
  */
 public class DriveTrain extends Subsystem {

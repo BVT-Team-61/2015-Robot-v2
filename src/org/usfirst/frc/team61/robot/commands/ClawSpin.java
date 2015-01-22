@@ -2,7 +2,9 @@ package org.usfirst.frc.team61.robot.commands;
 
 
 /**
- *
+ * Spins the claw motors based on joystick speed.
+ * Spin button reverses direction of one motor.
+ * @author Team-61
  */
 public class ClawSpin extends CommandBase {
 
@@ -18,7 +20,7 @@ public class ClawSpin extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	claw.clawDrive(oi.getClawSpeed(),oi.getSpinButton() );
+    	claw.clawDrive( oi.getClawSpeed(),oi.getSpinButton() );
     }
 
     // Make this return true when this Command no longer needs to run execute()

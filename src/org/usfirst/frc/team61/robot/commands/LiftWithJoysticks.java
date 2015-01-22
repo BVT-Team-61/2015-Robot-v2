@@ -1,7 +1,9 @@
 package org.usfirst.frc.team61.robot.commands;
 
-
-//TODO: Add LiftWithJoysticks Javadoc
+/**
+ * Lift using the the jElev speed.
+ * @author Team-61
+ */
 public class LiftWithJoysticks extends CommandBase {
 
 	public LiftWithJoysticks(){
@@ -17,7 +19,7 @@ public class LiftWithJoysticks extends CommandBase {
 	}
 
 	protected void initialize() {
-		System.out.println("Lifting Started");
+		System.out.println("Lifting");
 	}
 
 	protected void interrupted() {

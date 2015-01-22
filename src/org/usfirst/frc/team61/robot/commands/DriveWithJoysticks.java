@@ -5,7 +5,7 @@
 package org.usfirst.frc.team61.robot.commands;
 
 /**
- *
+ * Set the velocity of the drive motors based on the value of the joysticks.
  * @author Team-61 
  */
 public class DriveWithJoysticks extends CommandBase {

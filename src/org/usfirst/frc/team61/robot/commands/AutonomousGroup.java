@@ -7,8 +7,8 @@ package org.usfirst.frc.team61.robot.commands;
 import edu.wpi.first.wpilibj.command.CommandGroup;
 
 /**
- *
- * @author FrankAdmin
+ * Autonomous command group.
+ * @author Team-61
  */
 public class AutonomousGroup extends CommandGroup {
     

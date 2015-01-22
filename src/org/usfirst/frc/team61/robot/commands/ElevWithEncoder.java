@@ -1,6 +1,9 @@
 package org.usfirst.frc.team61.robot.commands;
 
-
+/**
+ * Move the elevator to a specific position based on encoder value.
+ * @author Team-61
+ */
 public class ElevWithEncoder extends CommandBase {
 	private double speed = 0.9;
 	private double target = 0;
@@ -17,7 +20,6 @@ public class ElevWithEncoder extends CommandBase {
 	}
 	protected void end() {
 		lift.moveElev(0.0);
-
 	}
 
 	protected void execute() {

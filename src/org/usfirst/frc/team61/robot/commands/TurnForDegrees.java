@@ -6,8 +6,8 @@
 package org.usfirst.frc.team61.robot.commands;
 
 /**
- *
- * @author 2015-15
+ * Turn the robot for a specific amount of degrees based on the gyro reading.
+ * @author Team-61
  */
 public class TurnForDegrees extends CommandBase {
     

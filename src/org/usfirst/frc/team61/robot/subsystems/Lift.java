@@ -7,6 +7,10 @@ import edu.wpi.first.wpilibj.Talon;
 import org.usfirst.frc.team61.robot.commands.LiftWithSense;
 import edu.wpi.first.wpilibj.Encoder;
 
+/**
+ * Subsystem to control the motor that lifts the totes up and down.
+ * @author Team-61
+ */
 public class Lift extends Subsystem {
 	
 	SpeedController elevMotor = new Talon(RobotMap.elevMotor);
@@ -23,12 +27,26 @@ public class Lift extends Subsystem {
 		setDefaultCommand(new LiftWithSense());
 
 	}
+	
+	/**
+	 * Move the elevator at a specific velocity.
+	 * @param vel - elevator velocity
+	 */
 	public void moveElev(double vel){
 		elevMotor.set(vel);
 	}
+	
+	/**
+	 * Gets the current value of the lift encoder
+	 * @return number of pulses
+	 */
 	public double getLiftEncoder(){
 		return -liftEncoder.getDistance();
 	}
+	
+	/**
+	 * Resets lift encoder
+	 */
 	public void resetEncoder(){
 		liftEncoder.reset();
 	}

@@ -1,7 +1,8 @@
 package org.usfirst.frc.team61.robot.commands;
 
 /**
- *
+ * Switches the state of the claw.
+ * @author Team-61
  */
 public class ClawToggle extends CommandBase {
 

@@ -22,7 +22,7 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 
     public final String teamNo = "  61";
-    public final String versionNo = "2015-1-20.2";
+    public final String versionNo = "2015-1-22.2";
     
     Command autonomousCommand;
 
@@ -39,15 +39,15 @@ public class Robot extends IterativeRobot {
         CommandBase.init();
         
         // Ouput program info to system log.
-        System.out.println("+---------------------------------------------+");
+        System.out.println("+----------------------------------------------+");
         System.out.println("| Team "+teamNo+" - Software Version: "+versionNo+" |");
-        System.out.println("+---------------------------------------------+");
+        System.out.println("+----------------------------------------------+");
     }
-	
-	public void disabledPeriodic() {
-		Scheduler.getInstance().run();
-	}
 
+    /**
+     * This function is run at the start of autonomous.
+     * Initialize and call auto command here.
+     */
     public void autonomousInit() {
         // schedule the autonomous command (example)
         if (autonomousCommand != null) autonomousCommand.start();
@@ -60,7 +60,11 @@ public class Robot extends IterativeRobot {
     public void autonomousPeriodic() {
         Scheduler.getInstance().run();
     }
-
+    
+    /**
+     * This function is run at the start of teleop.
+     * Stop autonomous here.
+     */
     public void teleopInit() {
 		// This makes sure that the autonomous stops running when
         // teleop starts running. If you want the autonomous to 
@@ -68,6 +72,13 @@ public class Robot extends IterativeRobot {
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
         System.out.println("Tele-Op Enabled");
+    }
+
+    /**
+     * This function is called periodically during operator control
+     */
+    public void teleopPeriodic() {
+        Scheduler.getInstance().run();
     }
 
     /**
@@ -79,11 +90,11 @@ public class Robot extends IterativeRobot {
     }
 
     /**
-     * This function is called periodically during operator control
+     * This function is called periodically when disabled.
      */
-    public void teleopPeriodic() {
-        Scheduler.getInstance().run();
-    }
+	public void disabledPeriodic() {
+		Scheduler.getInstance().run();
+	}
     
     /**
      * This function is called periodically during test mode

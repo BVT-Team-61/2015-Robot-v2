@@ -6,8 +6,9 @@
 package org.usfirst.frc.team61.robot.commands;
 
 /**
- * Drive for a specified distance according to rotary encoder.
- * @author OAmour
+ * Drive for a specified distance (backwards) according to rotary encoder.
+ * Should be replaced by a command that drives for a distance in both directions eventually.
+ * @author Team-61
  */
 public class ReverseDriveForDistance extends CommandBase {
     
