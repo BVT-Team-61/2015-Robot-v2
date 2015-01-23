@@ -34,8 +34,8 @@ public class ElevWithEncoder extends CommandBase {
 		else if(error < -5) vel = speed;
 		else vel = 0;
 		lift.moveElev(vel);
-		 System.out.print(position+" units ");
-	     System.out.println(error+" units to go @ "+vel);
+		System.out.print(position+" units ");
+	    System.out.println(error+" units to go @ "+vel);
 
 	}
 

@@ -36,7 +36,7 @@ public class Lift extends Subsystem {
 	 * @param vel - elevator velocity
 	 */
 	public void moveElev(double vel){
-		if(liftLimit.get() && vel < 0) elevMotor.set(0.0);
+		if(liftLimit.get() && vel > 0) elevMotor.set(0.0);
 		else elevMotor.set(vel);
 	}
 	
