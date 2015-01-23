@@ -26,6 +26,7 @@ public class RobotMap {
     public static final int rightEncoderB = 3;
     public static final int elevEncoderA = 4;
     public static final int elevEncoderB = 5;
+    public static final int liftLimit = 6;
     
     //Solenoid (PCM)
     public static final int openSolenoid = 0;

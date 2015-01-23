@@ -50,7 +50,7 @@ public class ElevWithEncoder extends CommandBase {
 	}
 
 	protected boolean isFinished() {
-		return Math.abs(error)<threshold;
+		return Math.abs(error)<threshold || lift.getLiftLimit();
 	}
 
 }
