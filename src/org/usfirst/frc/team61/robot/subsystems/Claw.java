@@ -1,6 +1,7 @@
 package org.usfirst.frc.team61.robot.subsystems;
 
 import org.usfirst.frc.team61.robot.RobotMap;
+import org.usfirst.frc.team61.robot.commands.ClawSpin;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.Solenoid;
@@ -23,7 +24,7 @@ public class Claw extends Subsystem {
 	private SpeedController rightClawMotor = new Talon(RobotMap.rightClawMotor);
 	
     public void initDefaultCommand() {
-    	System.out.println("Claw Started");
+    	setDefaultCommand(new ClawSpin());
     }
     
     /**
