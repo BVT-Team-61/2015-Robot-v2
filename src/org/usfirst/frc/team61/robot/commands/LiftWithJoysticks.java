@@ -19,7 +19,6 @@ public class LiftWithJoysticks extends CommandBase {
 	}
 
 	protected void initialize() {
-		System.out.println("Lifting");
 	}
 
 	protected void interrupted() {

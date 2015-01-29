@@ -18,7 +18,6 @@ public class LiftWithSense extends CommandBase {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
 		lift.moveElev(oi.getElevSpeed()*oi.getElevSense());
-		//System.out.println(oi.getElevSpeed()+" * "+oi.getElevSense());
     }
 
     // Make this return true when this Command no longer needs to run execute()

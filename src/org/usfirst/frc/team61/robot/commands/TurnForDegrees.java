@@ -11,7 +11,6 @@ package org.usfirst.frc.team61.robot.commands;
  */
 public class TurnForDegrees extends CommandBase {
     
-    //private static final double kScale = 0.03;
     private static final double kThresh = 5.0;
     private double target;
     private double angle;

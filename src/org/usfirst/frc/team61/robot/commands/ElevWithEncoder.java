@@ -40,7 +40,6 @@ public class ElevWithEncoder extends CommandBase {
 	}
 
 	protected void initialize() {
-		//lift.resetEncoder();
 		position = lift.getLiftEncoder();
 		error = target - position;
 	}

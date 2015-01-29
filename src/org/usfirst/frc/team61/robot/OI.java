@@ -35,7 +35,9 @@ public class OI {
 	Button elevPosCButton = new JoystickButton(jElev,11);
 	
 	
-	
+	/**
+	 * OI Constructor - Define button to command mappings here.
+	 */
     public OI() {
     	// Triggers ClawToggle command when the jClaw trigger is pressed.
 		clawButton.whenPressed(new ClawToggle());

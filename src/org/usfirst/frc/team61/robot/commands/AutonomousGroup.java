@@ -12,8 +12,7 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
  */
 public class AutonomousGroup extends CommandGroup {
     
-    public AutonomousGroup() {        
-        //addSequential(new ReverseDriveForDistance(10, 0.2));
+    public AutonomousGroup() {
     	addSequential(new ElevWithEncoder(10, .25));
     	addSequential(new DriveForDistance(3,.5 ));
     	addSequential(new ClawToggle());

@@ -15,7 +15,6 @@ public class ClawToggle extends CommandBase {
     // Called just before this Command runs the first time
     protected void initialize() {
     	claw.setState(!claw.getState()); // Set the claw to the opposite state
-    	//System.out.println("Claw Toggled");
     }
 
     // Called repeatedly when this Command is scheduled to run

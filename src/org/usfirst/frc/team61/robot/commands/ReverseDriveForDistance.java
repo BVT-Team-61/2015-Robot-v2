@@ -36,8 +36,6 @@ public class ReverseDriveForDistance extends CommandBase {
     protected void execute() {
         drivetrain.tankDrive(speed, speed);
         traveled = -1.0*((drivetrain.getLeftEncoder()+drivetrain.getRightEncoder())/2);
-        System.out.print(traveled+" units ");
-        System.out.println((target - traveled)+" units to go");
     }
 
     // Make this return true when this Command no longer needs to run execute()

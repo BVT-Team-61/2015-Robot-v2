@@ -23,7 +23,6 @@ public class Lift extends Subsystem {
 
 	public Lift(){
 		liftEncoder.setDistancePerPulse(dp);
-		//liftEncoder.setReverseDirection(true);
 	}
 	
 	protected void initDefaultCommand() {
