@@ -4,10 +4,12 @@ package org.usfirst.frc.team61.robot;
 
 import org.usfirst.frc.team61.robot.commands.CommandBase;
 
+import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+
 import org.usfirst.frc.team61.robot.commands.AutonomousGroup;
 
 /**
@@ -25,6 +27,7 @@ public class Robot extends IterativeRobot {
     public final String versionNo = "2015-1-29.C";
     
     Command autonomousCommand;
+    CameraServer server;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -37,6 +40,9 @@ public class Robot extends IterativeRobot {
 		
         // Initialize all subsystems
         CommandBase.init();
+        server = CameraServer.getInstance();
+        //the camera name (ex "cam0") can be found through the roborio web interface
+        server.startAutomaticCapture("cam0");
         
         // Ouput program info to system log.
         System.out.println("+----------------------------------------------+");
