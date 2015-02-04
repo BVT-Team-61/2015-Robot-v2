@@ -35,6 +35,7 @@ public class DriveForDistance extends CommandBase {
     protected void execute() {
         drivetrain.tankDrive(speed, speed);
         traveled = (drivetrain.getLeftEncoder()+drivetrain.getRightEncoder())/2;
+        System.out.println("######S"+speed+" L"+drivetrain.getLeftEncoder()+" R"+drivetrain.getRightEncoder());
     }
 
     // Make this return true when this Command no longer needs to run execute()

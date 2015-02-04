@@ -117,7 +117,7 @@ public class DriveTrain extends Subsystem {
      */
     public double getLeftEncoder()
     {
-        return leftEncoder.getDistance();
+        return -leftEncoder.getDistance();
     }
     
     // -- Gyroscope

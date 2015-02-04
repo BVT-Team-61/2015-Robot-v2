@@ -13,14 +13,16 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 public class AutonomousGroup extends CommandGroup {
     
     public AutonomousGroup() {
-    	addSequential(new ElevWithEncoder(10, .25));
-    	addSequential(new DriveForDistance(3, .5));
+    	addParallel(new ElevWithEncoder(39, .4));
+    	addSequential(new WaitForTime(0.9));
+    	addSequential(new DriveForDistance(10, -.5));
     	addSequential(new ClawToggle());
-    	addSequential(new ClawMoveAuto(.5, 1/3));
-    	addSequential(new TurnForDegrees(90, 0.3));
-    	addSequential(new DriveForDistance(15, .5));
+    	addSequential(new ClawMoveAuto(1, 1));
+    	addSequential(new TurnForDegrees(-70, 0.3));
+    	addSequential(new DriveForDistance(90, -.5));
     	addSequential(new ClawToggle());
-    	addSequential(new ElevWithEncoder(0, .5));
-    	addSequential(new ReverseDriveForDistance(1, 0.2));
+    	addSequential(new ElevWithEncoder(5, .5));
+    	addSequential(new ReverseDriveForDistance(1, -0.4));
     }
+
 }
