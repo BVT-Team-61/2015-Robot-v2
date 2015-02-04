@@ -37,6 +37,7 @@ public class TurnForDegrees extends CommandBase {
         System.out.println("T "+target+" - A "+angle+" = E "+error);
         double vel = (error > 0) ? speed : -speed;
         System.out.println(-vel + " " + vel);
+        drivetrain.tankDrive(-vel, vel);
         System.out.println(error);
     }
 

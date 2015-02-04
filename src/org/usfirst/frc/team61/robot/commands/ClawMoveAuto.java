@@ -4,12 +4,11 @@ package org.usfirst.frc.team61.robot.commands;
 public class ClawMoveAuto extends CommandBase {
 
 	private double vel = .2;
-	private double time = 1;
 	
 	public ClawMoveAuto(double time, double vel){
 		requires(claw);
 		this.vel = vel;
-		this.time = time;
+		setTimeout(time);
 	}
 	
 	protected void end() {
@@ -18,7 +17,6 @@ public class ClawMoveAuto extends CommandBase {
 
 	protected void execute() {
 		claw.clawDrive(vel,false);
-		setTimeout(time);
 	}
 
 	protected void initialize() {
