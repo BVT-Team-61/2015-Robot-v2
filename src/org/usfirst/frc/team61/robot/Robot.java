@@ -24,7 +24,7 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 
     public final String teamNo = "  61";
-    public final String versionNo = "2015-1-29.C";
+    public final String versionNo = "2015-02-04.A";
     
     Command autonomousCommand;
     CameraServer server;
