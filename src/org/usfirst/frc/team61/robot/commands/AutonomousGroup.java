@@ -18,11 +18,13 @@ public class AutonomousGroup extends CommandGroup {
     	addSequential(new DriveForDistance(10, -.5));
     	addSequential(new ClawToggle());
     	addSequential(new ClawMoveAuto(1, 1));
-    	addSequential(new TurnForDegrees(-70, 0.3));
-    	addSequential(new DriveForDistance(94, -.5));
+    	addSequential(new TurnForDegrees(-80, 0.3));
+    	addSequential(new DriveForDistance(126, -.5));
+    	addSequential(new WaitForTime(0.5));
+    	addSequential(new TurnForDegrees(-80, 0.3));
     	addSequential(new ClawToggle());
-    	addSequential(new ElevWithEncoder(5, .5));
-    	addSequential(new ReverseDriveForDistance(4, -0.4));
+    	//addSequential(new ElevWithEncoder(30, .5));
+    	//addSequential(new ReverseDriveForDistance(4, -0.4));
     }
 
 }
