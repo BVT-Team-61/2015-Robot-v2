@@ -8,16 +8,19 @@ public class LiftWithSense extends CommandBase {
 
     public LiftWithSense() {
         requires(lift);
+        requires(serial);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
 		System.out.println("Lifting w/ Sense Started");
+		System.out.println("With Serial Output");
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
 		lift.moveElev(oi.getElevSpeed()*oi.getElevSense());
+		serial.sendString((int)lift.getLiftEncoder());
     }
 
     // Make this return true when this Command no longer needs to run execute()

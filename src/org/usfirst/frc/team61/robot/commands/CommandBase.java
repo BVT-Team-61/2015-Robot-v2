@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.command.Command;
 
 import org.usfirst.frc.team61.robot.OI;
 import org.usfirst.frc.team61.robot.subsystems.Claw;
+import org.usfirst.frc.team61.robot.subsystems.ComPort;
 import org.usfirst.frc.team61.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team61.robot.subsystems.Lift;
 
@@ -21,6 +22,7 @@ public abstract class CommandBase extends Command {
     public static DriveTrain drivetrain = new DriveTrain();
     public static Lift lift = new Lift();
     public static Claw claw = new Claw();
+    public static ComPort serial = new ComPort();
     
     public static void init() {
         // This MUST be here. If the OI creates Commands (which it very likely
