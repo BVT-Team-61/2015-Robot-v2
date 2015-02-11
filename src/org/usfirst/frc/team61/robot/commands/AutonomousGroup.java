@@ -28,6 +28,7 @@ public class AutonomousGroup extends CommandGroup {
     	addSequential(new ReverseDriveForDistance(20, -0.4));
     	addSequential(new ClawToggle());
     	addSequential(new TurnForDegrees(-160, 0.3));
+    	addSequential(new ClawToggle());
     }
 
 }
