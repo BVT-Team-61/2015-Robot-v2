@@ -26,7 +26,7 @@ public class TurnForDegrees extends CommandBase {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	drivetrain.resetGyro();
+    	//drivetrain.resetGyro();
         target = drivetrain.getGyroAngle() + angle;
     }
 
