@@ -25,5 +25,9 @@ public class ComPort extends Subsystem {
     public void sendString( String data ){
     	com.writeString(data);
     }
+    public void sendByte( byte data){
+    	byte[] b = new byte[] {data};
+    	com.write(b, 1);
+    }
 }
 

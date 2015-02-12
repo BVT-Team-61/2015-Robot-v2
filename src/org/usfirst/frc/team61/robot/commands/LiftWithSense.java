@@ -20,7 +20,7 @@ public class LiftWithSense extends CommandBase {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
 		lift.moveElev(oi.getElevSpeed()*oi.getElevSense());
-		serial.sendString((int)lift.getLiftEncoder());
+		serial.sendByte((byte)lift.getLiftEncoder());
     }
 
     // Make this return true when this Command no longer needs to run execute()
