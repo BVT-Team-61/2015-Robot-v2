@@ -2,6 +2,9 @@
 package org.usfirst.frc.team61.robot;
 
 
+import org.usfirst.frc.team61.robot.commands.AutoDefault;
+import org.usfirst.frc.team61.robot.commands.AutoLandfill;
+import org.usfirst.frc.team61.robot.commands.AutoNoTote;
 import org.usfirst.frc.team61.robot.commands.CommandBase;
 
 import edu.wpi.first.wpilibj.CameraServer;
@@ -10,7 +13,6 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
-import org.usfirst.frc.team61.robot.commands.AutonomousGroup;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -36,7 +38,9 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
 		oi = new OI();
         // instantiate the command used for the autonomous period
-         autonomousCommand = new AutonomousGroup();
+        autonomousCommand = new AutoDefault();
+        //autonomousCommand = new AutoLandfill();
+        //autonomousCommand = new AutoNoTote();
 		
         // Initialize all subsystems
         CommandBase.init();
