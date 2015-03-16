@@ -13,7 +13,9 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 public class AutonomousGroup extends CommandGroup {
     
     public AutonomousGroup() {
-    	addParallel(new ElevWithEncoder(30, .4)); // Try 34 next.
+    	
+    	// Full auto 
+    	addParallel(new ElevWithEncoder(40, .4)); // Try 34 next.
     	addSequential(new WaitForTime(0.9));
     	addSequential(new DriveForDistance(10, -.5));
     	addSequential(new ClawToggle());
@@ -29,6 +31,12 @@ public class AutonomousGroup extends CommandGroup {
     	addSequential(new ClawToggle());
     	addSequential(new TurnForDegrees(-160, 0.3));
     	addSequential(new ClawToggle());
+    	
+    	// No tote
+//    	addParallel(new ElevWithEncoder(40, .4)); // Try 34 next.
+//    	addSequential(new WaitForTime(0.9));
+////    	addSequential(new TurnForDegrees(-80, 0.3)); // Needed if parallel to wall.
+//    	addSequential(new DriveForDistance(136, -.45)); // Try 134 or 132 next.
     }
 
 }
