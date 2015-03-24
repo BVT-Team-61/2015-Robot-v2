@@ -21,6 +21,7 @@ public abstract class CommandBase extends Command {
     public static DriveTrain drivetrain = new DriveTrain();
     public static Lift lift = new Lift();
     public static Claw claw = new Claw();
+    public static BucketLift bucketlift = new BucketLift();
     
     public static void init() {
         // This MUST be here. If the OI creates Commands (which it very likely

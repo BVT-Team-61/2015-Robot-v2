@@ -34,7 +34,7 @@ public class OI {
 	Button elevPosDButton = new JoystickButton(jElev,10);
 	Button elevPosCButton = new JoystickButton(jElev,11);
 	
-	
+	Button BucketLift = new JoystickButton (jElev,1);
 	/**
 	 * OI Constructor - Define button to command mappings here.
 	 */
