@@ -31,6 +31,8 @@ public class RobotMap {
     //Solenoid (PCM)
     public static final int openSolenoid = 0;
     public static final int closeSolenoid = 1;
+    public static final int upSolenoid =  2;
+    public static final int downSolenoid =  3;		
     
     //Analog IO
     public static final int mainGyro = 0;
