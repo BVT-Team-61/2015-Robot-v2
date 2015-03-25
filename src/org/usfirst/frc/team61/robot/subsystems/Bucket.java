@@ -25,5 +25,10 @@ public class Bucket extends Subsystem {
 	public boolean getState(){
 		return Up.get();
 	}
+	@Override
+	protected void initDefaultCommand() {
+		// TODO Auto-generated method stub
+		
+	}
 }
 	

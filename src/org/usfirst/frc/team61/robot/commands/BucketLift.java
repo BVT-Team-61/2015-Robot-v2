@@ -3,11 +3,11 @@ package org.usfirst.frc.team61.robot.commands;
 public class BucketLift extends CommandBase {
 	
 	public BucketLift(){
-		requires(bucketlift);
+		requires(bucket);
 	}
 
 protected void initialize(){
-	bucketlift.setState(!bucketlift.getState());
+	bucket.setState(!bucket.getState());
 }
 	
     protected void execute(){
