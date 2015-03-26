@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 import org.usfirst.frc.team61.robot.commands.AutonomousGroup;
+import org.usfirst.frc.team61.robot.commands.Autonomous2;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -24,7 +25,7 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 
     public final String teamNo = "  61";
-    public final String versionNo = "2015-02-10.!";
+    public final String versionNo = "2015-03-26.Q";
     
     Command autonomousCommand;
     CameraServer server;
@@ -36,7 +37,8 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
 		oi = new OI();
         // instantiate the command used for the autonomous period
-         autonomousCommand = new AutonomousGroup();
+         //autonomousCommand = new AutonomousGroup();
+         autonomousCommand = new Autonomous2();
 		
         // Initialize all subsystems
         CommandBase.init();

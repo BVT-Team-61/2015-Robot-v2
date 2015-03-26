@@ -45,22 +45,22 @@ public class Claw extends Subsystem {
     
     /**
      * Sets the claw state
-     * @param state - true (open) or false
+     * @param state - true (close) or false
      */
     public void setState(boolean state) {
     	if(state) {
-        	openClaw();
-    	} else {
     		closeClaw();
+    	} else {
+        	openClaw();
     	}
     }
     
     /**
      * returns the state of the claw pnuematics
-     * @return true (open) or false
+     * @return true (close) or false
      */
     public boolean getState() {
-    	return open.get();
+    	return close.get();
     }
     
 	/**

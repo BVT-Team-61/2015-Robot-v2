@@ -12,7 +12,7 @@ public class ClawMoveAuto extends CommandBase {
 	}
 	
 	protected void end() {
-
+		claw.clawDrive(0.0, false);
 	}
 
 	protected void execute() {

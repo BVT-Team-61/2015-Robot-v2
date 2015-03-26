@@ -6,9 +6,9 @@ public class BucketLift extends CommandBase {
 		requires(bucket);
 	}
 
-protected void initialize(){
-	bucket.setState(!bucket.getState());
-}
+	protected void initialize(){
+		bucket.setState(!bucket.getState());
+	}
 	
     protected void execute(){
     	

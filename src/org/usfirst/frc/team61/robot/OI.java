@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 import org.usfirst.frc.team61.robot.RobotMap;
+import org.usfirst.frc.team61.robot.commands.BucketLift;
 import org.usfirst.frc.team61.robot.commands.ClawToggle;
 import org.usfirst.frc.team61.robot.commands.ElevWithEncoder;
 import org.usfirst.frc.team61.robot.commands.ElevEncoderReset;
@@ -34,14 +35,14 @@ public class OI {
 	Button elevPosDButton = new JoystickButton(jElev,10);
 	Button elevPosCButton = new JoystickButton(jElev,11);
 	
-	Button BucketLift = new JoystickButton (jElev,1);
+	Button bucketButton = new JoystickButton (jElev,1);
 	/**
 	 * OI Constructor - Define button to command mappings here.
 	 */
     public OI() {
     	// Triggers ClawToggle command when the jClaw trigger is pressed.
 		clawButton.whenPressed(new ClawToggle());
-		
+		bucketButton.whenPressed(new BucketLift());
 		// Elevator levels defined here. Uses base buttons.
 		elevPosAButton.whenPressed(new ElevWithEncoder(0,0.4));
 		elevPosBButton.whenPressed(new ElevWithEncoder(13,0.4));
