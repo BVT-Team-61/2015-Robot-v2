@@ -2,6 +2,7 @@
 package org.usfirst.frc.team61.robot;
 
 
+
 import org.usfirst.frc.team61.robot.commands.CommandBase;
 
 import edu.wpi.first.wpilibj.CameraServer;
@@ -12,6 +13,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 import org.usfirst.frc.team61.robot.commands.AutonomousGroup;
 import org.usfirst.frc.team61.robot.commands.Autonomous2;
+import org.usfirst.frc.team61.robot.commands.AutonomousThreeStack;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -37,9 +39,9 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
 		oi = new OI();
         // instantiate the command used for the autonomous period
-         //autonomousCommand = new AutonomousGroup();
-         autonomousCommand = new Autonomous2();
-		
+        // autonomousCommand = new AutonomousGroup();
+        // autonomousCommand = new Autonomous2();
+		autonomousCommand = new AutonomousThreeStack();
         // Initialize all subsystems
         CommandBase.init();
         server = CameraServer.getInstance();

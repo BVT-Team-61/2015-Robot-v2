@@ -18,7 +18,7 @@ public class Autonomous2 extends CommandGroup {
 		addSequential(new DriveForDistance(76,-.4));// step 6 go forward
 		addSequential(new TurnForDegrees(-80,.4));//turn left 90 degrees
 		addSequential(new BucketLift());// drop the bucket
-		// wouldnt publish so i added something new just ignore this
+		
 	    
 	}
 }
