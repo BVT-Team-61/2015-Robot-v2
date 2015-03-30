@@ -7,6 +7,11 @@ public class Bucket extends Subsystem {
 	private Solenoid Up = new Solenoid(RobotMap.upSolenoid);
 	private Solenoid Down = new Solenoid(RobotMap.downSolenoid);
 
+	@Override
+	protected void initDefaultCommand() {
+		// Do Nothing
+	}
+	
 	public void BucketUp() {
 		Down.set(false);
 		Up.set(true);
@@ -24,11 +29,6 @@ public class Bucket extends Subsystem {
 	}
 	public boolean getState(){
 		return Up.get();
-	}
-	@Override
-	protected void initDefaultCommand() {
-		// TODO Auto-generated method stub
-		
 	}
 }
 	
