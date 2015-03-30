@@ -4,8 +4,8 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.CommandGroup;
 //IMPORTANT. I didnt exactly know how the ElevWithEncoders worked going down since we have
 // never used it. be careful i dont want to break the robot. -Jake
-public class AutonomousThreeStack extends CommandGroup {
-	public AutonomousThreeStack(){
+public class AutoThreeTote extends CommandGroup {
+	public AutoThreeTote(){
 			addParallel(new ClawMoveAuto(15,1));
 			addSequential(new BucketLift());
 			addSequential(new ElevWithEncoder(30,.4));

@@ -10,9 +10,9 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
  * Autonomous command group.
  * @author Team-61
  */
-public class AutonomousGroup extends CommandGroup {
+public class AutoOneTote extends CommandGroup {
     
-    public AutonomousGroup() {
+    public AutoOneTote() {
     	addParallel(new ElevWithEncoder(30, .4)); // Try 34 next.
     	addSequential(new WaitForTime(0.9));
     	addSequential(new DriveForDistance(10, -.5));

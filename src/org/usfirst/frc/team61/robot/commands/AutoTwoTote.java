@@ -2,8 +2,8 @@ package org.usfirst.frc.team61.robot.commands;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
 
-public class Autonomous2 extends CommandGroup {
-	public Autonomous2(){
+public class AutoTwoTote extends CommandGroup {
+	public AutoTwoTote(){
 		addSequential(new BucketLift()); // Step 1. Rollers in,Bucket lifted. 
 		//addSequential(new ClawMoveAuto(1,1));
 		addSequential(new ElevWithEncoder(30,.5)); //Step 2. Up arm, turn right 180 degrees, open arms
