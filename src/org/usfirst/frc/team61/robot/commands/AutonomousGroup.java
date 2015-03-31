@@ -17,7 +17,7 @@ public class AutonomousGroup extends CommandGroup {
     	addSequential(new WaitForTime(0.9));
     	addSequential(new DriveForDistance(10, -.5));
     	addSequential(new ClawToggle());
-    	addSequential(new ClawMoveAuto(1, 1));
+    	addSequential(new ClawSetAuto(1));
     	addSequential(new TurnForDegrees(-80, 0.3));
     	addSequential(new DriveForDistance(136, -.4)); // Try 134 or 132 next.
     	addSequential(new WaitForTime(0.75));
