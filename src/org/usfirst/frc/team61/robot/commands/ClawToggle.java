@@ -10,6 +10,7 @@ public class ClawToggle extends CommandBase {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	requires(claw);
+    	setTimeout(.25);
     }
 
     // Called just before this Command runs the first time
@@ -23,7 +24,7 @@ public class ClawToggle extends CommandBase {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return true;
+        return isTimedOut();
     }
 
     // Called once after isFinished returns true
