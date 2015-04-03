@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 
 public class AutoTwoTote extends CommandGroup {
 	public AutoTwoTote(){
+		System.out.println("Two Tote Auto Running");
 		addSequential(new BucketLift()); // Step 1. Rollers in,Bucket lifted. 
 		//addSequential(new ClawMoveAuto(1,1));
 		addSequential(new ElevWithEncoder(30,.5)); //Step 2. Up arm, turn right 180 degrees, open arms

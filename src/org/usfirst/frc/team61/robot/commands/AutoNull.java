@@ -4,6 +4,6 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 
 public class AutoNull extends CommandGroup {
 	public AutoNull(){
-		
+		System.out.println("Auto Null Running");
 	}
 }

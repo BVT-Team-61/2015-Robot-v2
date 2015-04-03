@@ -3,6 +3,7 @@ package org.usfirst.frc.team61.robot.commands;
 import edu.wpi.first.wpilibj.command.CommandGroup;
 public class AutoThreeTote extends CommandGroup {
 	public AutoThreeTote(){
+		System.out.println("Three Tote Auto Running");
 			addParallel(new ClawSetAuto(1)); // Step 1
 			addSequential(new BucketLift());
 			addParallel(new ElevWithEncoder(30,.7));

@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 public class AutoOneTote extends CommandGroup {
     
     public AutoOneTote() {
+    	System.out.println("One Tote Auto Running");
     	addParallel(new ElevWithEncoder(30, .4)); // Try 34 next.
     	addSequential(new WaitForTime(0.9));
     	addSequential(new DriveForDistance(10, -.5));
