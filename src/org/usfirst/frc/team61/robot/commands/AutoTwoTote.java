@@ -7,8 +7,7 @@ public class AutoTwoTote extends CommandGroup {
 		System.out.println("Two Tote Auto Running");
 		addSequential(new BucketLift()); // Step 1. Rollers in,Bucket lifted. 
 		//addSequential(new ClawMoveAuto(1,1));
-		addSequential(new ElevWithEncoder(30,.5)); //Step 2. Up arm, turn right 180 degrees, open arms
-		addSequential(new ClawToggle());
+		addSequential(new ElevWithEncoder(30,.7)); //Step 2. Up arm, turn right 180 degrees, open arms
 		addSequential(new TurnForDegrees(165,.4)); 
 		addSequential(new DriveForDistance(30,-.4));// Step 3. Move forward. 
 		addSequential(new ClawToggle());// step 4. close arm. suck in roller,

@@ -14,7 +14,7 @@ public class AutoOneTote extends CommandGroup {
     
     public AutoOneTote() {
     	System.out.println("One Tote Auto Running");
-    	addParallel(new ElevWithEncoder(30, .4)); // Try 34 next.
+    	addParallel(new ElevWithEncoder(30, .6)); // Try 34 next.
     	addSequential(new WaitForTime(0.9));
     	addSequential(new DriveForDistance(10, -.5));
     	addSequential(new ClawToggle());
@@ -24,9 +24,8 @@ public class AutoOneTote extends CommandGroup {
     	addSequential(new WaitForTime(0.75));
     	addSequential(new TurnForDegrees(-80, 0.3));
     	addSequential(new ClawToggle());
-    	addSequential(new WaitForTime(0.5));
-    	addSequential(new ElevWithEncoder(7, .4));
-    	addSequential(new ReverseDriveForDistance(5, -0.4));
+    	addSequential(new ReverseDriveForDistance(15, -0.4));
+    	addSequential(new TurnForDegrees(160, 0.3));
     }
 
 }
