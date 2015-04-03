@@ -15,10 +15,10 @@ public class ToggleSwitch extends Subsystem {
 	}
 	
 	public boolean getSwitchA(){
-		return switchA.get();
+		return !switchA.get();
 	}
 	
 	public boolean getSwitchB(){
-		return switchB.get();
+		return !switchB.get();
 	}
 }
