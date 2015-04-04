@@ -20,12 +20,15 @@ public class AutoOneTote extends CommandGroup {
     	addSequential(new ClawToggle());
     	addSequential(new ClawSetAuto(1));
     	addSequential(new TurnForDegrees(-80, 0.3));
-    	addSequential(new DriveForDistance(136, -.4)); // Try 134 or 132 next.
+    	addSequential(new DriveForDistance(136, -.45)); // Try 134 or 132 next.
     	addSequential(new WaitForTime(0.75));
     	addSequential(new TurnForDegrees(-80, 0.3));
     	addSequential(new ClawToggle());
-    	addSequential(new ReverseDriveForDistance(15, -0.4));
-    	addSequential(new TurnForDegrees(160, 0.3));
+    	addSequential(new WaitForTime(0.5));
+    	addSequential(new ReverseDriveForDistance(20, -0.4));
+    	addSequential(new ClawToggle());
+    	addSequential(new TurnForDegrees(-160, 0.3));
+    	addSequential(new ClawToggle());
     }
 
 }
