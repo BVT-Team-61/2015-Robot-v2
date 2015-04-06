@@ -15,7 +15,7 @@ public class AutoTwoTote extends CommandGroup {
 		addSequential(new TurnForDegrees(-80,.4));// step 5. turn 90 degrees
 		addSequential(new DriveForDistance(60,-.5));// step 6 go forward
 		addSequential(new DriveForDistance(76,-.4));// step 6 go forward
-		addSequential(new TurnForDegrees(-80,.4));//turn left 90 degrees
+		addSequential(new TurnForDegrees(-70,.4));//turn left 90 degrees
 		addSequential(new BucketLift());// drop the bucket
 		
 	    
