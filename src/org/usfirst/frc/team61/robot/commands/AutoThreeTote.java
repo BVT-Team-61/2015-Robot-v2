@@ -12,7 +12,6 @@ public class AutoThreeTote extends CommandGroup {
 		addSequential(new DriveForDistance(20,-.4)); // Step 2 // Tweak up?
 		addSequential(new ClawToggle());
 		addSequential(new DriveForDistance(20,-.4)); // Tweak up?
-		addSequential(new TurnForDegrees(-139, .45)); // Step 3 // Needs to be tweaked.
 		addSequential(new DriveForDistance(55,-.7));
 		addSequential(new ElevWithEncoder(10,.8)); // Tweak up?
 		addSequential(new ClawToggle()); // Step 5
