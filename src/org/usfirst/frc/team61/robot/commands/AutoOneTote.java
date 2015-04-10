@@ -17,18 +17,18 @@ public class AutoOneTote extends CommandGroup {
     	addParallel(new ElevWithEncoder(34, .8)); // Try 34 next.
     	addSequential(new WaitForTime(0.9));
     	addSequential(new DriveForDistance(10, -.5));
-    	addSequential(new ClawToggle());
+    	addSequential(new ClawClose());
     	addSequential(new ClawSetAuto(1));
     	addSequential(new TurnForDegrees(-80, 0.3));
     	addSequential(new DriveForDistance(136, -.45)); // Try 134 or 132 next.
     	addSequential(new WaitForTime(0.75));
     	addSequential(new TurnForDegrees(-80, 0.3));
-    	addSequential(new ClawToggle());
+    	addSequential(new ClawOpen());
     	addSequential(new WaitForTime(0.5));
     	addSequential(new ReverseDriveForDistance(20, -0.4));
-    	addSequential(new ClawToggle());
+    	addSequential(new ClawClose());
     	addSequential(new TurnForDegrees(-155, 0.4));
-    	addSequential(new ClawToggle());
+    	addSequential(new ClawOpen());
     }
 
 }
