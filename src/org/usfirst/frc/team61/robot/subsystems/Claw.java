@@ -62,7 +62,7 @@ public class Claw extends Subsystem {
      * @return true (close) or false
      */
     public boolean getState() {
-    	return close.get();
+    	return open.get();
     }
     
 	/**
