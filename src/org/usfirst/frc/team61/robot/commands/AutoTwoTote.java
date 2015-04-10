@@ -10,7 +10,7 @@ public class AutoTwoTote extends CommandGroup {
 		addSequential(new ElevWithEncoder(30,.8)); //Step 2. Up arm, turn right 180 degrees, open arms
 		addSequential(new TurnForDegrees(165,.4)); 
 		addSequential(new DriveForDistance(30,-.4));// Step 3. Move forward. 
-		addSequential(new ClawToggle());// step 4. close arm. suck in roller,
+		addSequential(new ClawClose());// step 4. close arm. suck in roller,
 		addSequential(new ClawSetAuto(1));
 		addSequential(new TurnForDegrees(-80,.4));// step 5. turn 90 degrees
 		addSequential(new DriveForDistance(60,-.5));// step 6 go forward
