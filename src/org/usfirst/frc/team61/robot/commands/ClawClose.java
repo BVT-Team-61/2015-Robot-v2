@@ -1,25 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package org.usfirst.frc.team61.robot.commands;
 
+import edu.wpi.first.wpilibj.command.Command;
+
 /**
- * Waits for a specific amount of time.
- * Will continue driving while it waits.
- * @author Team-61
+ *
  */
-public class WaitForTime extends CommandBase {
-    
-    public WaitForTime(double time) {
+public class ClawClose extends CommandBase {
+
+    public ClawClose() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-        setTimeout(time);
+    	requires(claw);
+    	setTimeout(.25);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	claw.setState(true); // Set the claw to the closed state
     }
 
     // Called repeatedly when this Command is scheduled to run
@@ -40,4 +37,3 @@ public class WaitForTime extends CommandBase {
     protected void interrupted() {
     }
 }
-//HELLO

@@ -1,26 +1,23 @@
 package org.usfirst.frc.team61.robot.commands;
 
 
-public class ClawMoveAuto extends CommandBase {
+public class ClawSetAuto extends CommandBase {
 
 	private double vel = .2;
 	
-	public ClawMoveAuto(double time, double vel){
+	public ClawSetAuto(double vel){
 		requires(claw);
 		this.vel = vel;
-		setTimeout(time);
 	}
 	
 	protected void end() {
-
 	}
 
 	protected void execute() {
-		claw.clawDrive(vel,false);
 	}
 
 	protected void initialize() {
-
+		claw.clawDrive(vel,false);
 	}
 
 	protected void interrupted() {
@@ -28,7 +25,7 @@ public class ClawMoveAuto extends CommandBase {
 	}
 
 	protected boolean isFinished() {
-		return isTimedOut();
+		return true;
 	}
 
 }

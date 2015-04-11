@@ -9,7 +9,7 @@ public class ElevWithEncoder extends CommandBase {
 	private double target = 0;
 	private double position;
 	private double error;
-	private static final double threshold = 1.5;
+	private static final double threshold = .25;
 
 	public ElevWithEncoder(double target, double speed){
 		requires(lift);

@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import org.usfirst.frc.team61.robot.RobotMap;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.Talon;
-import org.usfirst.frc.team61.robot.commands.LiftWithSense;
+import org.usfirst.frc.team61.robot.commands.LiftWithJoysticks;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.DigitalInput;
 
@@ -26,7 +26,7 @@ public class Lift extends Subsystem {
 	}
 	
 	protected void initDefaultCommand() {
-		setDefaultCommand(new LiftWithSense());
+		setDefaultCommand(new LiftWithJoysticks());
 
 	}
 	

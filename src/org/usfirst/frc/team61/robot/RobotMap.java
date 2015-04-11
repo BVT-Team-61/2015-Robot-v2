@@ -27,10 +27,15 @@ public class RobotMap {
     public static final int elevEncoderA = 4;
     public static final int elevEncoderB = 5;
     public static final int liftLimit = 6;
+    public static final int autoSwitchA = 7;
+    public static final int autoSwitchB = 8; 
+    
     
     //Solenoid (PCM)
     public static final int openSolenoid = 0;
     public static final int closeSolenoid = 1;
+    public static final int upSolenoid =  2;
+    public static final int downSolenoid =  3;		
     
     //Analog IO
     public static final int mainGyro = 0;
